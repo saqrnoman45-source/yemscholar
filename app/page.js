@@ -106,3 +106,6 @@ const styles = {
     color: "white",
     border: "none",
     padding: "
+export default function Home() {
+  return <h1 style={{color:"red"}}>TEST OK 🚀</h1>
+}
