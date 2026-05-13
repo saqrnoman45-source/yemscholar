@@ -105,7 +105,43 @@ const styles = {
     background: "#2563eb",
     color: "white",
     border: "none",
-    padding: "
-export default function Home() {
-  return <h1 style={{color:"red"}}>TEST OK 🚀</h1>
-}
+    padding: "12px 20px",
+    borderRadius: "10px",
+    fontSize: "16px"
+  },
+
+  grid: {
+    display: "grid",
+    gap: "15px",
+    padding: "20px"
+  },
+
+  card: {
+    background: "#1e293b",
+    padding: "20px",
+    borderRadius: "12px",
+    textAlign: "center"
+  },
+
+  login: {
+    padding: "30px 20px",
+    textAlign: "center"
+  },
+
+  input: {
+    display: "block",
+    width: "100%",
+    maxWidth: "300px",
+    margin: "10px auto",
+    padding: "10px",
+    borderRadius: "8px",
+    border: "none"
+  },
+
+  footer: {
+    textAlign: "center",
+    padding: "30px",
+    borderTop: "1px solid #1e293b",
+    marginTop: "30px"
+  }
+};
