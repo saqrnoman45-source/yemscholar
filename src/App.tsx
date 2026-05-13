@@ -2,27 +2,29 @@ import React from 'react';
 
 function App() {
   return (
-    <div style={{ direction: 'rtl', textAlign: 'right', fontFamily: 'Tahoma, sans-serif' }}>
-      {/* شريط علوي بسيط */}
-      <nav style={{ background: '#003366', color: 'white', padding: '15px', display: 'flex', justifyContent: 'space-between' }}>
-        <h1 style={{ margin: 0 }}>يمسكولر (YemScholar)</h1>
-        <a href="/s-secure-portal-2026" style={{ color: 'white', textDecoration: 'none' }}>دخول المدير</a>
+    <div style={{ direction: 'rtl', textAlign: 'right', fontFamily: 'Arial, sans-serif', backgroundColor: '#f4f7f6', minHeight: '100vh' }}>
+      {/* رأس الصفحة */}
+      <nav style={{ background: '#0056b3', color: 'white', padding: '15px 20px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }}>
+        <h1 style={{ margin: 0, fontSize: '1.5rem' }}>منصة يمسكولر (YemScholar)</h1>
       </nav>
 
-      <main style={{ padding: '20px', maxWidth: '800px', margin: 'auto' }}>
-        <header style={{ textAlign: 'center', margin: '40px 0' }}>
-          <h2 style={{ color: '#003366' }}>مرحباً بك في منصة المنح الدراسية اليمنية</h2>
-          <p>بوابة الطالب اليمني للحصول على فرص تعليمية عالمية.</p>
+      <main style={{ padding: '20px', maxWidth: '900px', margin: '0 auto' }}>
+        <header style={{ textAlign: 'center', padding: '40px 0' }}>
+          <h2 style={{ color: '#333' }}>بوابتك للمنح الدراسية العالمية</h2>
+          <p style={{ color: '#666', fontSize: '1.1rem' }}>مشروع تقني لخدمة الطلاب اليمنيين - تطوير الطالب صقر نعمان</p>
         </header>
 
-        <section style={{ background: '#f9f9f9', padding: '20px', borderRadius: '10px' }}>
-          <h3>أحدث المنح المضافة:</h3>
-          <p>لا يوجد منح مضافة حالياً. كن أول من يضيف منح من لوحة التحكم.</p>
+        {/* قسم عرض المنح */}
+        <section style={{ background: 'white', padding: '25px', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }}>
+          <h3 style={{ borderBottom: '2px solid #0056b3', paddingBottom: '10px', color: '#0056b3' }}>آخر الفرص المتاحة</h3>
+          <div style={{ textAlign: 'center', padding: '30px', color: '#888' }}>
+            <p>سيتم عرض المنح هنا قريباً عند إضافتها من لوحة التحكم.</p>
+          </div>
         </section>
       </main>
 
-      <footer style={{ textAlign: 'center', marginTop: '50px', fontSize: '0.8em', color: '#666' }}>
-        <p>تطوير: صقر نعمان - طالب أمن سيبراني بجامعة الجزيرة</p>
+      <footer style={{ textAlign: 'center', padding: '20px', color: '#999', fontSize: '0.9rem' }}>
+        <p>© 2026 صقر نعمان العفيف(إب)</p>
       </footer>
     </div>
   );
