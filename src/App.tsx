@@ -1,24 +1,25 @@
-
-import { ReactNode } from 'react';
+// src/App.tsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
 
-// ملاحظة: يمكنك لاحقاً استخدام React Router للانتقال بين الصفحات
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* شريط التنقل العلوي */}
-      <Navbar />
-
-      {/* المحتوى الرئيسي (حالياً نعرض الصفحة الرئيسية فقط) */}
-      <main className="flex-grow">
-        <Home />
-      </main>
-
-      {/* تذييل الصفحة */}
-      <Footer />
-    </div>
+    <Router>
+      <div className="flex flex-col min-h-screen bg-[#020617]">
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            {/* يمكنك إضافة بقية المسارات هنا */}
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
