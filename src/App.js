@@ -1,8 +1,15 @@
 function App() {
   return (
-    <div>
-      <h1>YemScholar</h1>
-      <p>الموقع يعمل بنجاح 🚀</p>
+    <div dir="rtl">
+      <h1>يمن سكولار 🎓</h1>
+
+      <p>
+        مرحبًا بك في منصة يمن سكولار التعليمية
+      </p>
+
+      <button>
+        ابدأ الآن
+      </button>
     </div>
   );
 }
