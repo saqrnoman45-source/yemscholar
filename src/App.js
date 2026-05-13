@@ -1,15 +1,28 @@
 function App() {
   return (
-    <div dir="rtl">
-      <h1>يمن سكولار 🎓</h1>
+    <div dir="rtl" className="container">
+      <nav className="navbar">
+        <h1>يمن سكولار 🎓</h1>
 
-      <p>
-        مرحبًا بك في منصة يمن سكولار التعليمية
-      </p>
+        <div>
+          <button>تسجيل الدخول</button>
+        </div>
+      </nav>
 
-      <button>
-        ابدأ الآن
-      </button>
+      <section className="hero">
+        <h2>
+          منصة تعليمية ذكية للطلاب اليمنيين
+        </h2>
+
+        <p>
+          تعلم البرمجة، الأمن السيبراني، الذكاء الاصطناعي،
+          والمهارات التقنية الحديثة.
+        </p>
+
+        <button className="start-btn">
+          ابدأ التعلم الآن 🚀
+        </button>
+      </section>
     </div>
   );
 }
