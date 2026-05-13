@@ -1,116 +1,100 @@
-import { useState } from "react"; import { motion } from "framer-motion"; import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button";
+export default function Home() {
+  return (
+    <main style={{
+      minHeight: "100vh",
+      background: "#0f172a",
+      color: "white",
+      fontFamily: "sans-serif"
+    }}>
+      
+      {/* Navbar */}
+      <nav style={{
+        display: "flex",
+        justifyContent: "space-between",
+        padding: "20px",
+        borderBottom: "1px solid #1e293b"
+      }}>
+        <h1>YemScholar AI</h1>
+        <button style={{
+          background: "#2563eb",
+          color: "white",
+          border: "none",
+          padding: "10px 20px",
+          borderRadius: "10px"
+        }}>
+          تسجيل الدخول
+        </button>
+      </nav>
 
-export default function YemScholarRedesign() { const [showLogin, setShowLogin] = useState(false); const [dark, setDark] = useState(true);
+      {/* Hero */}
+      <section style={{
+        textAlign: "center",
+        padding: "100px 20px"
+      }}>
+        <h1 style={{
+          fontSize: "45px",
+          fontWeight: "bold"
+        }}>
+          منصة الذكاء الاصطناعي التعليمية
+        </h1>
 
-return ( <div className={dark ? "dark bg-gray-950 text-white" : "bg-white text-gray-900"}> {/* NAVBAR */} <nav className="flex items-center justify-between px-6 py-4 border-b border-gray-800"> <h1 className="text-xl font-bold">YemScholar AI</h1> <div className="flex gap-3"> <Button onClick={() => setDark(!dark)}> {dark ? "Light" : "Dark"} </Button> </div> </nav>
+        <p style={{
+          marginTop: "20px",
+          color: "#cbd5e1"
+        }}>
+          تعلم بشكل أسرع وأكثر ذكاء مع YemScholar AI
+        </p>
 
-{/* HERO */}
-  <section className="text-center py-24 px-4">
-    <motion.h1
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="text-4xl md:text-6xl font-bold"
-    >
-      منصة الذكاء الاصطناعي التعليمية
-    </motion.h1>
+        <button style={{
+          marginTop: "30px",
+          background: "#2563eb",
+          color: "white",
+          border: "none",
+          padding: "15px 30px",
+          borderRadius: "12px",
+          fontSize: "18px"
+        }}>
+          ابدأ الآن
+        </button>
+      </section>
 
-    <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-      تجربة حديثة تساعدك في الدراسة، البحث، وفهم المواد بطريقة أسرع وأكثر ذكاء.
-    </p>
+      {/* Features */}
+      <section style={{
+        display: "grid",
+        gap: "20px",
+        padding: "20px"
+      }}>
+        {[
+          "شرح الدروس بالذكاء الاصطناعي",
+          "حل الواجبات بسرعة",
+          "واجهة احترافية وسهلة"
+        ].map((item, i) => (
+          <div key={i} style={{
+            background: "#1e293b",
+            padding: "25px",
+            borderRadius: "20px"
+          }}>
+            <h2>{item}</h2>
+          </div>
+        ))}
+      </section>
 
-    <div className="mt-8 flex justify-center gap-4">
-      <Button className="px-6 py-3 text-lg" onClick={() => setShowLogin(true)}>
-        ابدأ الآن
-      </Button>
-      <Button variant="outline">تعرف أكثر</Button>
-    </div>
-  </section>
+      {/* Footer */}
+      <footer style={{
+        textAlign: "center",
+        padding: "40px",
+        marginTop: "50px",
+        borderTop: "1px solid #1e293b"
+      }}>
+        <p>© 2026 جميع الحقوق محفوظة</p>
 
-  {/* LOGIN MODAL */}
-  {showLogin && (
-    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-4">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="bg-gray-900 rounded-3xl p-8 w-full max-w-md border border-gray-800 shadow-2xl"
-      >
-        <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold">تسجيل الدخول</h2>
-          <button
-            onClick={() => setShowLogin(false)}
-            className="text-gray-400 hover:text-white"
-          >
-            ✕
-          </button>
-        </div>
-
-        <div className="space-y-4">
-          <input
-            type="email"
-            placeholder="البريد الإلكتروني"
-            className="w-full p-3 rounded-xl bg-gray-800 border border-gray-700 focus:outline-none"
-          />
-
-          <input
-            type="password"
-            placeholder="كلمة المرور"
-            className="w-full p-3 rounded-xl bg-gray-800 border border-gray-700 focus:outline-none"
-          />
-
-          <Button className="w-full py-3 text-lg rounded-xl">
-            دخول
-          </Button>
-
-          <p className="text-sm text-gray-400 text-center">
-            ليس لديك حساب؟ إنشاء حساب جديد
-          </p>
-        </div>
-      </motion.div>
-    </div>
-  )}
-
-  {/* FEATURES */} */}
-  <section className="grid md:grid-cols-3 gap-6 px-6 py-16">
-    {[
-      { title: "ذكاء اصطناعي تعليمي", desc: "شرح وتبسيط الدروس بسهولة" },
-      { title: "حلول فورية", desc: "إجابات سريعة ودقيقة للأسئلة" },
-      { title: "واجهة حديثة", desc: "تصميم سريع وسهل الاستخدام" },
-    ].map((item, i) => (
-      <Card key={i} className="rounded-2xl">
-        <CardContent className="p-6">
-          <h2 className="text-xl font-semibold">{item.title}</h2>
-          <p className="text-gray-400 mt-2">{item.desc}</p>
-        </CardContent>
-      </Card>
-    ))}
-  </section>
-
-  {/* DEMO SECTION */}
-  <section className="px-6 py-16 text-center bg-gray-900/40">
-    <h2 className="text-3xl font-bold">جرب المنصة الآن</h2>
-    <p className="text-gray-400 mt-2">واجهة مبسطة للتفاعل مع الذكاء الاصطناعي</p>
-    <div className="mt-6 max-w-2xl mx-auto bg-gray-800 rounded-2xl p-4 text-left">
-      <p className="text-sm text-gray-300">مثال:</p>
-      <p className="mt-2">اشرح لي معادلة فيثاغورس بطريقة سهلة</p>
-    </div>
-  </section>
-
-  {/* FOOTER */}
-  {/* FOOTER */}
-
-<footer className="text-center py-12 border-t border-gray-800 bg-gradient-to-t from-gray-900/40 to-transparent">
-  <div className="max-w-2xl mx-auto">
-    <p className="text-gray-500">
-      © 2026 YemScholar AI - جميع الحقوق محفوظة
-    </p>
-    <p className="mt-3 text-lg font-semibold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-      صقر نعمان العفيف ✍️
-    </p>
-    <p className="text-xs text-gray-600 mt-2">
-      صُنع بعناية وبلمسة إبداعية 🚀
-    </p>
-  </div>
-</footer>
-    </div>
+        <h2 style={{
+          marginTop: "10px",
+          color: "#60a5fa"
+        }}>
+          صقر نعمان العفيف ✍️
+        </h2>
+      </footer>
+    </main>
   );
-              }
+          }
