@@ -51,9 +51,21 @@ return ( <div className={dark ? "dark bg-gray-950 text-white" : "bg-white text-g
   </section>
 
   {/* FOOTER */}
-  <footer className="text-center py-10 border-t border-gray-800">
-    <p className="text-gray-500">© 2026 YemScholar AI - جميع الحقوق محفوظة | صقر نعمان العفيف</p>
-  </footer>
-</div>
+  {/* FOOTER */}
 
-); }
+<footer className="text-center py-12 border-t border-gray-800 bg-gradient-to-t from-gray-900/40 to-transparent">
+  <div className="max-w-2xl mx-auto">
+    <p className="text-gray-500">
+      © 2026 YemScholar AI - جميع الحقوق محفوظة
+    </p>
+    <p className="mt-3 text-lg font-semibold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+      صقر نعمان العفيف ✍️
+    </p>
+    <p className="text-xs text-gray-600 mt-2">
+      صُنع بعناية وبلمسة إبداعية 🚀
+    </p>
+  </div>
+</footer>
+    </div>
+  );
+                                             }
