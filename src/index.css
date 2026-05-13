@@ -1,24 +1,29 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  /* استخدام خط Tahoma كما في الكود الخاص بك */
-  font-family: Tahoma, sans-serif; 
-  /* اللون الداكن العميق الذي ظهر في التحديث */
-  background-color: #020617; 
+  font-family: Tahoma, sans-serif; /* الخط الذي اخترته في الكود */
+  background-color: #020617; /* اللون الداكن الذي ظهر في التعديلات */
   color: white;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
 }
 
+/* الكلاس الذي أضفته في صورة الكود */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
+/* تنسيق الهيدر ليكون رسومياً */
 .navbar {
-  background-color: rgba(15, 23, 42, 0.8); /* خلفية شبه شفافة */
-  backdrop-filter: blur(10px); /* تأثير زجاجي */
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #1e293b;
+  background-color: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
