@@ -1,12 +1,25 @@
-// src/components/GlassCard.tsx
-import React from 'react';
 
-const GlassCard = ({ children }: { children: React.ReactNode }) => {
+import { ReactNode } from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+
+// ملاحظة: يمكنك لاحقاً استخدام React Router للانتقال بين الصفحات
+function App() {
   return (
-    <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-xl hover:bg-white/10 transition-all duration-300">
-      {children}
+    <div className="flex flex-col min-h-screen">
+      {/* شريط التنقل العلوي */}
+      <Navbar />
+
+      {/* المحتوى الرئيسي (حالياً نعرض الصفحة الرئيسية فقط) */}
+      <main className="flex-grow">
+        <Home />
+      </main>
+
+      {/* تذييل الصفحة */}
+      <Footer />
     </div>
   );
-};
+}
 
-export default GlassCard;
+export default App;
