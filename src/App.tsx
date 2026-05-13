@@ -1,14 +1,12 @@
+// src/components/GlassCard.tsx
 import React from 'react';
 
-function App() {
+const GlassCard = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div style={{ direction: 'rtl', textAlign: 'right', padding: '20px', fontFamily: 'Arial' }}>
-      <h1 style={{ color: '#0056b3' }}>منصة يمسكولر للمنح الدراسية</h1>
-      <p>مرحباً بك يا صقر، تم تشغيل الموقع بنجاح باللغة العربية.</p>
-      <hr />
-      <p>هذا المشروع مخصص لطلاب جامعة الجزيرة في إب.</p>
+    <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-xl hover:bg-white/10 transition-all duration-300">
+      {children}
     </div>
   );
-}
+};
 
-export default App; // تأكد من وجود هذا السطر بدقة
+export default GlassCard;
